@@ -1,1 +1,0 @@
-/opt/rh/devtoolset-6/root/usr/bin/c++       CMakeFiles/test.dir/unit_test.cpp.o  -o test -rdynamic lib/libgtest.a -lpthread 
