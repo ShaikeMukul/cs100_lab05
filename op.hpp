@@ -4,12 +4,15 @@
 #include "base.hpp"
 
 class Op : public Base {
-    private:
-	double storedValue = -1.0;
-    public:
-        Op(double value) : Base(), storedValue(value) { }
-        virtual double evaluate() { return storedValue; }
-        virtual std::string stringify() { return std::to_string(storedValue); }
+        private:
+            double val;
+        public:
+        Op(double value) : Base() {
+                val = value; }
+        virtual double evaluate() {
+                return val; }
+        virtual std::string stringify() {
+                return std::to_string(val); }
 };
 
 #endif //__OP_HPP__
