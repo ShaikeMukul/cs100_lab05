@@ -19,6 +19,13 @@ TEST(AddTest, AdditionNeg){
         EXPECT_EQ(test->evaluate(), -5.0);
 }
 
+TEST(AddTest, AdditionZero){
+        Op* stub1 = new Op(0);
+        Op* stub2 = new Op(245);
+        Base* test = new Add(stub1, stub2);
+        EXPECT_EQ(test->evaluate(), 245);
+}
+
 TEST(AddTest, OrderedExpression){
         Op* stub1 = new Op(5);
         Op* stub2 = new Op(7);
@@ -31,6 +38,13 @@ TEST(AddTest, OrderedExpressionNeg){
         Op* stub2 = new Op(2);
         Base* test = new Add(stub1, stub2);
         EXPECT_EQ(test->stringify(), "(-24.000000+2.000000)");
+}
+
+TEST(AddTest, OrderedExpressionZero){
+        Op* stub1 = new Op(0);
+        Op* stub2 = new Op(1.5);
+        Base* test = new Add(stub1, stub2);
+        EXPECT_EQ(test->stringify(), "(0.000000+1.500000)");
 }
 
 
