@@ -33,7 +33,7 @@ TEST(MultTest, MultStringifyZero) {
 }
 
 TEST(MultTest, MultStringify) {
-        Base* three = new Op(5);
+        Base* three = new Op(3);
         Base* four = new Op(4);
         Mult* test = new Mult(three, four);
         EXPECT_EQ(test->stringify(), "(3.000000 * 4.000000)");
