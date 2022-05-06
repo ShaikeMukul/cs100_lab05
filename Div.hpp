@@ -16,13 +16,12 @@ class Div: public Base {
                 div1 = div_val1;
                 div2 = div_val2;
         }
-
-        virtual double evaluate() {
+	double evaluate() {
                 if(div2->evaluate() == 0){ return INT_MAX;} 
                 else return (div1->evaluate() / div2->evaluate());
         }
 
-        virtual std::string stringify() {
+        std::string stringify() {
                 return("(" + div1->stringify() + " / " + div2->stringify() + ")");
         }
 
