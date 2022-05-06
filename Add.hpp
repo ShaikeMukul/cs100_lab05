@@ -9,6 +9,7 @@ class Add : public Base{
 		Base* right;
 	public:
 		double evaluate() {return left->evaluate() + right->evaluate();}
+		std::string stringify() {return "(" + left->stringify() + std::to_string(+) + right->stringify()  + ")"}
 }
 
 #endif
