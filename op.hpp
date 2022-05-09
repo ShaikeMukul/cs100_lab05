@@ -8,11 +8,12 @@ class Op : public Base {
             double val;
         public:
         Op(double value) : Base() {
-		val = value; }
-        virtual double evaluate() { 
-		return val; }
-        virtual std::string stringify() { 
-		return std::to_string(val); }
+                val = value; }
+        virtual double evaluate(){
+	       return val; }
+        virtual std::string stringify() {
+                return std::to_string(val); }
+
 };
 
 #endif //__OP_HPP__
